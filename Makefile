@@ -1,5 +1,11 @@
-TARGET := iphone:clang:latest:12.2
+DEBUG = 0
+FINALPACKAGE = 1
+
+TARGET := iphone:clang:latest:12.4
 ARCHS = arm64 arm64e
+
+THEOS_PACKAGE_SCHEME = roothide
+
 
 INSTALL_TARGET_PROCESSES = SpringBoard
 
