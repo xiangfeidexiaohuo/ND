@@ -9,21 +9,21 @@ internal enum PowerAction: Identifiable {
 
 	var title: String {
 		switch self {
-		case .respring: return "Respring"
-		case .safeMode: return "Safe Mode"
-		case .userspaceReboot: return "Userspace Reboot"
-		case .reboot: return "Reboot"
-		case .shutdown: return "Shutdown"
+		case .respring: return "注销设备"
+		case .safeMode: return "安全模式"
+		case .userspaceReboot: return "用户空间"
+		case .reboot: return "重启设备"
+		case .shutdown: return "设备关机"
 		}
 	}
 
 	var message: String {
 		switch self {
-		case .respring: return "Are you sure you want to respring?"
-		case .safeMode: return "Are you sure you want to enter safe mode?"
-		case .userspaceReboot: return "Are you sure you want to perform a userspace reboot?"
-		case .reboot: return "Are you sure you want to reboot your device?"
-		case .shutdown: return "Are you sure you want to shut down your device?"
+		case .respring: return "确定要注销设备吗？"
+		case .safeMode: return "确定要进入安全模式吗？"
+		case .userspaceReboot: return "确定要重启用户空间吗？"
+		case .reboot: return "确定要重启设备吗？"
+		case .shutdown: return "确定要关机吗"
 		}
 	}
 }

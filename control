@@ -1,10 +1,11 @@
-Package: com.nightwind.powersettings
-Name: PowerSettings
+Package: com.dao.powersettings
+Name: PowerSettings 简体中文版(rootless)
 Version: 0.0.1
 Architecture: iphoneos-arm
-Description: A simple tweak to add power settings to the Settings app.
-Maintainer: Nightwind
+Description: 将电源菜单(注销、重启等)添加到“设置”右上角！
+Maintainer: Nightwind& 刀刀
 Author: Nightwind
-Section: Tweaks
-Icon: https://github.com/NightwindDev/PowerSettings/blob/main/Images/Icon.png?raw=true
+Section: 嗨-工具
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 13.0)
+Conflicts: com.nightwind.powersettings
+

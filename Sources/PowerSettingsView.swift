@@ -11,16 +11,16 @@ internal struct PowerSettingsView: View {
 
 	var body: some View {
 		List {
-			PowerSettingsButton(title: "Respring", subtitle: "killall SpringBoard", action: { self.selectedAction = .respring })
-			PowerSettingsButton(title: "Safe Mode", subtitle: "killall -SeGV SpringBoard", action: { self.selectedAction = .safeMode })
+			PowerSettingsButton(title: "注销设备", subtitle: "杀死 SpringBoard 进程", action: { self.selectedAction = .respring })
+			PowerSettingsButton(title: "安全模式", subtitle: "进入设备安全模式", action: { self.selectedAction = .safeMode })
 
 			// On some older jailbreaks the userspace reboot functionality may not have been implemented
 			if viewModel.isUserspaceRebootAvailable() {
-				PowerSettingsButton(title: "Userspace Reboot", subtitle: "launchctl reboot userspace", action: { self.selectedAction = .userspaceReboot })
+				PowerSettingsButton(title: "用户空间", subtitle: "重新启动用户空间", action: { self.selectedAction = .userspaceReboot })
 			}
 
-			PowerSettingsButton(title: "Reboot", subtitle: "FBSSystemService.reboot()", action: { self.selectedAction = .reboot })
-			PowerSettingsButton(title: "Shut Down", subtitle: "FBSSystemService.shutdown()", action: { self.selectedAction = .shutdown })
+			PowerSettingsButton(title: "重启设备", subtitle: "重新启动设备", action: { self.selectedAction = .reboot })
+			PowerSettingsButton(title: "设备关机", subtitle: "关闭设备电源", action: { self.selectedAction = .shutdown })
 		}
 		.alert(item: self.$selectedAction) { action in
 			Alert(

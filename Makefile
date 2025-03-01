@@ -1,5 +1,10 @@
+DEBUG = 0
+FINALPACKAGE = 1
+
 TARGET := iphone:clang:latest:13.0
 ARCHS = arm64 arm64e
+
+THEOS_PACKAGE_SCHEME = rootless
 
 INSTALL_TARGET_PROCESSES = Preferences
 
